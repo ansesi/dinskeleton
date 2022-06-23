@@ -1,0 +1,11 @@
+Package: dinskeleton
+Title: Estrutura de Desenho Instrucional
+Version: 0.0.0.9000
+Authors@R: 
+    person("Antonio Sergio", "da Silva", , "antonio.sergio@preventsenior.com.br", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: Este pacote descreve as principais etapas do planejamento instruncional em uma organização..
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
