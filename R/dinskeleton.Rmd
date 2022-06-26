@@ -228,15 +228,54 @@ Escolha um horário para deitar !!!
 
 ## Sequência do Ensino e Conteúdo Programático
 
+O conteúdo pode incluir:
+
+-   Narrativas, figuras, ilustrações, fotos e fórmulas;
+
+-   Exercícios de códigos (*chunks* para que os alunos possam editar e executar diretamente);
+
+-   Perguntas do tipo *quiz*;
+
+-   Vídeos (serviços suportados pelo YouTube e Vimeo);
+
+-   Interatividade com componentes do Shiny.
+
+O pacote [learnr](https://youtu.be/gwu63_WO7O8) facilita a transformação de qualquer documento R Markdown em um [tutorial interativo](https://rstudio.github.io/learnr/index.html), que consiste em conteúdo com componentes interativos para verificar e reforçar a compreensão do aprendiz [@j.j.allaire2020].
+
+Os tutoriais podem incluir quaisquer dos elementos listados *a priori*.
+
+```{=html}
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+```
+::: blue
+File -\> New File -\> R Markdown ... -\> From template -\> Interactive Tutorial
+:::
+
+![](photo/learnr_template.PNG)
+
 ## Procedimentos Instrucionais
 
 ## Medidas de Avaliação de Apredizagem
+
+O teste é uma técnica poderosa para otimizar o aprendizado de novas informações. Estudos usando uma variedade de materiais educacionais mostraram que o [efeito teste](https://youtu.be/dH3JEviZ6r8) é um fenômeno robusto. Os testes podem ser usados para melhorar a aprendizagem. Não só beneficiam a memorização de conteúdo específico, mas também aumentam a informação e a integração, produzindo uma organização melhor do conhecimento. O **efeito teste** não se limita a situações com o ritmo do instrutor mas também se generaliza para o ritmo próprio do aprendiz; não se limita ao mesmo tipo de material, mas também é transferível para diferentes tipos de material (e diferentes formatos de teste); não só melhora a aprendizagem e a recuperação de novas informações, mas também impede o acúmulo de interferências proativas. Ambas as variações na codificação e fases de recuperação podem contribuir para o efeito de teste direto [@yang2018].
+
+Fazer um teste não apenas avalia o que se sabe , mas também aumenta a retenção *a posteriori* (efeito teste). O teste é um meio poderoso para melhorar o aprendizado, não meramente para avaliá-lo [@roediger2006; @karpicke2011a; @ekuni2020].
 
 ## Ajustes do Desenho Instrucional
 
 ## Referências
 
+@yang2018
 
+@roediger2006
+
+@karpicke2011a
+
+@ekuni2020
+
+@j.j.allaire2020
 
 ::: {#refs}
 :::
@@ -254,28 +293,47 @@ Escolha um horário para deitar !!!
 ------------------------------------------------------------------------
 
 <hr>
+
+```{=html}
 <style>
-div.blue {background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 </style>
-<div class = "blue">
+```
+::: blue
 <!-- <hr> -->
-<p style="text-align: center;"><span style="color: #004c6e;"><b>Sistema de Gestão da Qualidade, Prevent Senior, 2022.</b></span></p>
-<!-- The <b> tag specifies bold text without any extra importance.  -->
-<p style="text-align: center;">A work by <a href="https://rmarkdown.rstudio.com/">R Markdown</a></p>
-</p>
+
 <p style="text-align: center;">
-![](https://www.rstudio.com/assets/img/icon-rstudio.svg){width=10%}
-![](https://www.rstudio.com/assets/img/icon-rstudio-team.svg){width=10%}
-![](https://www.rstudio.com/assets/img/icon-connect.svg){width=10%}
-![](https://rmarkdown.rstudio.com/docs/reference/figures/logo.png){width=10%}
-</p>
-<p style="text-align: center;"><span style="color: ##004c6e;"><en>RStudio 2022.02.1 Build 461 © 2009-2022 RStudio, PBC.</en></span></p>
+
+[<b>Sistema de Gestão da Qualidade, Prevent Senior, 2022.</b>]{style="color: #004c6e;"}
+
 </p>
 
-</div>
+<!-- The <b> tag specifies bold text without any extra importance.  -->
+
+<p style="text-align: center;">
+
+A work by <a href="https://rmarkdown.rstudio.com/">R Markdown</a>
+
+</p>
+
+</p>
+
+<p style="text-align: center;">
+
+![](https://www.rstudio.com/assets/img/icon-rstudio.svg){width="10%"} ![](https://www.rstudio.com/assets/img/icon-rstudio-team.svg){width="10%"} ![](https://www.rstudio.com/assets/img/icon-connect.svg){width="10%"} ![](https://rmarkdown.rstudio.com/docs/reference/figures/logo.png){width="10%"}
+
+</p>
+
+<p style="text-align: center;">
+
+[<en>RStudio 2022.02.1 Build 461 © 2009-2022 RStudio, PBC.</en>]{style="color: ##004c6e;"}
+
+</p>
+
+</p>
+:::
 
 <hr>
-
 
 ------------------------------------------------------------------------
 
