@@ -1,9 +1,10 @@
 ---
 title: "Efeito Teste"
-output: learnr::tutorial
-  fig_caption: no
-  progressive: true
-  allow_skip: true
+output: 
+    learnr::tutorial
+        # fig_caption: no
+        # progressive: true
+        # allow_skip: true
 runtime: shiny_prerendered
 ---
 
@@ -14,21 +15,27 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Recuperação de Informações
 
-### Exercise
+### Exercícios
 
-*Here's a simple exercise with an empty code chunk provided for entering the answer.*
+Aqui está um exercício simples com um pedaço de código vazio fornecido para inserir a resposta.
 
-Write the R code required to add two plus two:
+Escreva um breve comentário, considerando o ponto de vista estóico, sobre o seu desempenho em relação à humanidade:
 
-```{r two-plus-two, exercise=TRUE}
+```{r desempenho, exercise=TRUE}
 
 ```
 
-### Exercise with Code
+Enumere os três elementos que influenciam a formação da nova memória no estágio de codificação da memória:
 
-*Here's an exercise with some prepopulated code as well as `exercise.lines = 5` to provide a bit more initial room to work.*
+```{r fases-memoria, exercise=TRUE}
 
-Now write a function that adds any two numbers and then call it:
+```
+
+### Exercício com operação matemática
+
+*Aqui está um exercício um exercício com um código preenchido bem como `exercise.lines = 5` para fornecer um pouco mais de espaço inicial para trabalhar*
+
+Agora escreva uma função que some dois números quaisquer e chame-a:
 
 ```{r add-function, exercise=TRUE, exercise.lines = 5}
 add <- function() {
@@ -36,27 +43,11 @@ add <- function() {
 }
 ```
 
-## Topic
-
-### Exercise with Hint
-
-*Here's an exercise where the chunk is pre-evaulated via the `exercise.eval` option (so the user can see the default output we'd like them to customize). We also add a "hint" to the correct solution via the chunk immediate below labeled `print-limit-hint`.*
-
-Modify the following code to limit the number of rows printed to 5:
-
-```{r print-limit, exercise=TRUE, exercise.eval=TRUE}
-mtcars
-```
-
-```{r print-limit-hint}
-head(mtcars)
-```
-
 ### Quiz
 
-*You can include any number of single or multiple choice questions as a quiz. Use the `question` function to define a question and the `quiz` function for grouping multiple questions together.*
+*Você pode incluir qualquer número de perguntas de escolha simples ou múltipla como um quiz (questionário). Use a função `question` para definir a pergunta e a função `quiz` para agrupar várias perguntas.*
 
-Some questions to verify that you understand the purposes of various base and recommended R packages:
+Alguns exemplos:
 
 ```{r quiz}
 quiz(
@@ -66,11 +57,17 @@ quiz(
     answer("se submeter a testes", correct = TRUE),
     answer("dar aulas")
   ),
-  question("Which of the R packages listed below are used to create plots?",
-    answer("lattice", correct = TRUE),
-    answer("tools"),
-    answer("stats"),
-    answer("grid", correct = TRUE)
+  question("O estóico busca a excelência porque ele tem o compromisso com o cosmo. Pode-se afirmar que:",
+    answer("A excelência tem um compromisso com a humanidade.", correct = TRUE),
+    answer("O que eu faço ajuda e participa da construção de uma certa humanidade.", correct = TRUE),
+    answer("O que eu faço impacta a humanidade, ajuda a transformá-la, seja para um bem, seja para um mal.", correct = TRUE),
+    answer("Se eu me sair mal, o problema é meu. Portanto, a minha responsabilidade ética é maior do que o meu desempenho para mim.", correct = TRUE)
+  ),
+  question("Para formar uma nova memória, é importante que o aprendiz tenha foco atencional no instrutor de educação corporativa. O foco atencional é fundamental para qual das fases do processo de formação da memória?",
+    answer("codificação.", correct = TRUE),
+    answer("consolidação."),
+    answer("evocação"),
+    answer("reconsolidação.")
   )
 )
 ```
