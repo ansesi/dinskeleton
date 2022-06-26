@@ -293,45 +293,25 @@ Fazer um teste não apenas avalia o que se sabe , mas também aumenta a retenç�
 ------------------------------------------------------------------------
 
 <hr>
-
-```{=html}
 <style>
 div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 </style>
-```
-::: blue
+<div class = "blue">
 <!-- <hr> -->
-
-<p style="text-align: center;">
-
-[<b>Sistema de Gestão da Qualidade, Prevent Senior, 2022.</b>]{style="color: #004c6e;"}
-
-</p>
-
+<p style="text-align: center;"><span style="color: #004c6e;"><b>Sistema de Gestão da Qualidade, Prevent Senior, 2022.</b></span></p>
 <!-- The <b> tag specifies bold text without any extra importance.  -->
-
+<p style="text-align: center;">A work by <a href="https://rmarkdown.rstudio.com/">R Markdown</a></p>
+</p>
 <p style="text-align: center;">
-
-A work by <a href="https://rmarkdown.rstudio.com/">R Markdown</a>
-
+![](https://www.rstudio.com/assets/img/icon-rstudio.svg){width=10%}
+![](https://www.rstudio.com/assets/img/icon-rstudio-team.svg){width=10%}
+![](https://www.rstudio.com/assets/img/icon-connect.svg){width=10%}
+![](https://rmarkdown.rstudio.com/docs/reference/figures/logo.png){width=10%}
+</p>
+<p style="text-align: center;"><span style="color: ##004c6e;"><en>RStudio 2022.02.1 Build 461 © 2009-2022 RStudio, PBC.</en></span></p>
 </p>
 
-</p>
-
-<p style="text-align: center;">
-
-![](https://www.rstudio.com/assets/img/icon-rstudio.svg){width="10%"} ![](https://www.rstudio.com/assets/img/icon-rstudio-team.svg){width="10%"} ![](https://www.rstudio.com/assets/img/icon-connect.svg){width="10%"} ![](https://rmarkdown.rstudio.com/docs/reference/figures/logo.png){width="10%"}
-
-</p>
-
-<p style="text-align: center;">
-
-[<en>RStudio 2022.02.1 Build 461 © 2009-2022 RStudio, PBC.</en>]{style="color: ##004c6e;"}
-
-</p>
-
-</p>
-:::
+</div>
 
 <hr>
 
