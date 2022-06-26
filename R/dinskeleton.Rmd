@@ -1,0 +1,298 @@
+---
+title: "Estrutura do Desenho Instrucional"
+author: "Núcleo de Educação Corporativa"
+abstract: "Este relatório descreve as principais etapas para criar um planejamento instrucional"
+date: "Última atualização em `r format(Sys.time(), '%d / %m / %Y às %H:%M horas.')`"
+output: 
+  prettydoc::html_pretty:
+    theme: leonids
+    highlight: github
+    toc: true
+    toc_depth: 3
+#knit: pagedown::chrome_print
+link-citations: TRUE
+css: custom.css
+bibliography: references/references.bib
+csl: "references/abnt.csl"
+---
+
+[![Aretê](photo/excellence_iStock_1084713848.png){.illustration style="top: 10px; right: 20px; position: absolute" width="130"}](https://youtu.be/2qB5CAXAc7U)
+
+```{css didact, include = FALSE}
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+</style>
+```
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(eval = TRUE,            # Avalia code chunk
+                      echo = FALSE,           # Aparece source code na saída
+                      include = TRUE,         # Inclui qualquer coisa code chunk na saída
+                      warning = FALSE,        # Aparece menssagem de avisos
+                      message = FALSE,        # Aparece mensagem de erro
+                      collapse = FALSE,        # Aparece saída de texto e source code em único code block
+                      cache = FALSE,          # Avalia o code chunk em cada compilação
+                      fig.pos = "H",          # Posição da figura
+                      fig.align = "center",   # Alinhamento da figura
+                      fig.height = 7,         # Tamanho da altura da figura
+                      fig.width = 12          # Tamanho do comprimento da figura
+                      )           
+
+
+```
+
+```{r pacotes}
+
+if (!require("pacman")) install.packages("pacman")
+
+pacman::p_load(pacman,      
+               magrittr, 
+               rio, 
+               tidyverse, 
+               ggpubr,
+               gridExtra,
+               readxl, 
+               openxlsx, 
+               writexl,
+               googlesheets4, 
+               tiff,
+               htmlwidgets,
+               googledrive,
+               lubridate,
+               ggmap, 
+               data.table, 
+               fst, 
+               kableExtra, 
+               Hmisc,
+               jsonlite, 
+               httr, 
+               highcharter, 
+               Quandl,
+               DT, 
+               ids, 
+               uuid, 
+               qrcode,
+               sampling,
+               knitr,
+               tinytex,
+               rcompanion, 
+               effectsize, 
+               rstatix,
+               dunn.test,
+               FSA,
+               ape,
+               usethis,
+               extrafont,
+               DiagrammeR)
+               
+```
+
+------------------------------------------------------------------------
+
+| [*Pratica cada um dos teus atos como se fosse o último da tua vida.*]{style="color:Orange"}
+
+| [Marcus Aurelius Antoninus](https://youtu.be/HIsyqK-whCQ) ( Imperador Romano: 161 - 180 AD, [filósofo estóico](https://www.revistas.usp.br/letrasclassicas/article/view/73765/77431))
+
+------------------------------------------------------------------------
+
+## Objetivos Instrucionais
+
+<br>
+
+------------------------------------------------------------------------
+
+> Instruções são esclarecimentos relativos ao modo de usar alguma coisa.
+>
+> Uma instrução é uma explicação sobre o uso de algo.
+>
+> Uma instrução é uma ordem ou determinação verbal ou por escrito dada a pessoa responsável por uma missão, no que se refere a procedimentos.
+
+------------------------------------------------------------------------
+
+<br>
+
+```{=html}
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+```
+::: blue
+O **instrutor de educação corporativa** deverá :
+
+-   redigir **objetivos** instrucionais;
+
+-   escolher a **modalidade de entrega** da instrução;
+
+-   estabelecer a **sequência do ensino** e o **conteúdo da programação**;
+
+-   criar o **procedimento** para a instrução;
+
+-   definir **critérios para avaliação** da aprendizagem;
+
+-   **testar** o desenho instrucional aplicado.
+:::
+
+```{css, include = FALSE}
+.box{
+            position: relative;
+            font: 1em/1.45 Helvetica Neue, sans-serif, Droid Sans Fallback;
+        }
+
+        .box-title{
+            z-index: 1;
+            position: absolute;
+            color:white;
+            background-color: #4682B4;
+            margin-top: 1em;
+            text-align: center;
+            padding: 0.25em;
+            top: -2em;
+        }
+
+        .box-autor{
+            z-index: 1;
+            font-style: italic;
+            font-weight: bold;
+            position: relative;
+            background-color: #e6f0ff;
+            color: black;
+            padding: 0.5em;
+            text-align: right;
+        }
+
+        .box-content{
+            z-index: 0;
+            font-style: italic;
+            /* font-weight: bold; */
+            position: relative;
+            background-color: #e6f0ff;
+            color: black;
+            padding: 1.3em;
+        }
+
+        .box-title p, .box-content p, .box-autor p{
+  margin: 0px;
+}
+
+```
+
+Um objetivo instrucional tem três componentes essenciais :
+
+1.  **desempenho** - é o componente mais importante e indispensável do objetivo instrucional. Este componente descreve o que a pessoa será capaz de executar após o ensino, por meio de **comportamentos observáveis**.
+
+2.  **condição** - diz respeito às variáveis do ambiente no qual a pessoa está inserida que **apóiam** ou **restrigem** a ocorrência dos desempenhos esperados, descritos nos objetivos instrucionais.
+
+3.  **critério** - indicação do nível de proficiência ou do desempenho esperado em termos de características quantitativas e qualitativas das ações ou dos resultados das ações descritas nos resultados dos objetivos instrucionais.
+
+### Desempenho
+
+O desempenho é composto por um **verbo** e um **objeto de ação**. Os verbos devem indicar ações humanas que podem ser observadas, descritas de forma clara e precisa.
+
+À guisa de exemplo, a tabela abaixo traz alguns verbos de ação com instruções para a aplicação da Bezilpenicilina Benzatina, por via intramuscular, extraídos de sua [bula](https://consultaremedios.com.br/benzilpenicilina-benzatina/bula#posologia-como-usar).
+
+| Verbo         | Objeto de ação                                   |
+|---------------|--------------------------------------------------|
+| Puxar         | o êmbolo da seringa para trás.                   |
+| Certificar-se | de que a agulha não esteja em um vaso sanguíneo. |
+| Injetar       | a dose da medicação lentamente.                  |
+
+### Condição
+
+A condição diz respeito às características do contexto que viabilizam ou dificultam a ocorrência dos desempenhos. Convém considerar variáveis [**antropológicas**](https://youtu.be/xIxF8WLXwfI) (clima, cultura, estilo gerencial, valores), **fisiológicas** ([sono](https://youtu.be/6-A_jrnuQsE)), **materiais** (informações, equipamentos, ferramentas, espaço físico, mobiliário) e **ocupacionais** (carga horária, turno de trabalho, cargo, ocupação, vínculos adicionais) que antecedem e ou sucedem o comportamento e que o mantém ou não como [desempenho competente](https://youtu.be/iTFuK50vY_s).
+
+Quando comportamentos explícitos são distorcidos ou prejudicados, como são nas muitas maneiras que definem os déficits e nuances fundamentais de diferenças no desempenho ou na proficiência, necessariamente visamos a renormalização em todos os níveis do sistema ao projetar programas de treinamento. A neuroplasticidade impulsiona mudanças que remodelam amplamente o cérebro [@merzenich2014] .
+
+A [higiene do sono](https://youtu.be/YemEFvJpfrQ) é um conjunto de atividades que uma pessoa realiza na sua rotina que vão facilitar o seu cérebro de induzir o sono com qualidade.
+
+-   *Exercício físico regular* - os músculos sintetizam sinais químicos que alcançam o cérebro e afetam positivamente o sono profundo.
+
+-   *Exposição à luz natural pela manhã e menos exposição à luz artificial à noite* - A luz natural é um dos estímulos mais importantes para regular o relógio biológico que coordena o início e o final do sono.
+
+-   *Rotina de relaxamento* - É fundamental estabelecer uma rotina antes de deitar. Por exemplo: jantar, lavar a louça, ler um livro e deitar.
+
+-   *Deitar no horário certo* - O sono mais profundo acontece na primeira metade da noite. Atrasar o horário para dormir implica em ter menos sono profundo. Evite *"esticar a noite"* para falar com amigos, assitir mais um episódio da série, assistir um curso, ler mais umas páginas...
+
+```{=html}
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+```
+::: blue
+Escolha um horário para deitar !!!
+:::
+
+-   *Jantar e exercícios físicos 2 h antes de dormir* - O jantar ativa o fluxo sanguíneo do trato gastrointestinal e compete com o fluxo sanguíneo para o cérebro durante o sono profundo. O exercício físico pode ativar demasiadamente o cérebro dificultando o ato de dormir.
+
+## Modalidades de Entrega da Instrução
+
+## Sequência do Ensino e Conteúdo Programático
+
+## Procedimentos Instrucionais
+
+## Medidas de Avaliação de Apredizagem
+
+## Ajustes do Desenho Instrucional
+
+## Referências
+
+
+
+::: {#refs}
+:::
+
+<!--# inclui informações de contato após referências bibliográficas -->
+
+## Informações de Contato
+
+-   Web: <https://www.preventsenior.com.br>
+-   Email: [antonio.sergio\@preventsenior.com.br](mailto:antonio.sergio@preventsenior.com.br){.email}
+-   Phone: +55 (11) 94040 5357
+-   Email: [priscila.pacheco\@preventsenior.com.br](mailto:antonio.sergio@preventsenior.com.br){.email}
+-   Phone: +55 (11) 99556 3262
+
+------------------------------------------------------------------------
+
+<hr>
+<style>
+div.blue {background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "blue">
+<!-- <hr> -->
+<p style="text-align: center;"><span style="color: #004c6e;"><b>Sistema de Gestão da Qualidade, Prevent Senior, 2022.</b></span></p>
+<!-- The <b> tag specifies bold text without any extra importance.  -->
+<p style="text-align: center;">A work by <a href="https://rmarkdown.rstudio.com/">R Markdown</a></p>
+</p>
+<p style="text-align: center;">
+![](https://www.rstudio.com/assets/img/icon-rstudio.svg){width=10%}
+![](https://www.rstudio.com/assets/img/icon-rstudio-team.svg){width=10%}
+![](https://www.rstudio.com/assets/img/icon-connect.svg){width=10%}
+![](https://rmarkdown.rstudio.com/docs/reference/figures/logo.png){width=10%}
+</p>
+<p style="text-align: center;"><span style="color: ##004c6e;"><en>RStudio 2022.02.1 Build 461 © 2009-2022 RStudio, PBC.</en></span></p>
+</p>
+
+</div>
+
+<hr>
+
+
+------------------------------------------------------------------------
+
+```{r include=TRUE, fig.pos = "H",fig.align = "center", fig.height = 2,fig.width = 4}
+
+id_generation <- UUIDgenerate()
+qr <- qr_code(id_generation)
+plot(qr)
+
+```
+
+</p>
+
+```{=html}
+<p style = "text-align: center";>
+
+UUID:`r id_generation`
+
+</p>
+```

@@ -1,4 +1,3 @@
-
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 # dinskeleton
@@ -6,8 +5,8 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-O objetivo do dinskeleton é descrever as principais etapas do processo
-de criação de um planejamento instrucional.
+O objetivo do dinskeleton eh descrever as principais etapas do processo
+de criacao de um planejamento instrucional.
 
 ## Installation
 
