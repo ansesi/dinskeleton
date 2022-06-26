@@ -1,9 +1,9 @@
 ---
 title: "Efeito Teste"
 output: learnr::tutorial
-  # fig_caption: no
-  # progressive: true
-  # allow_skip: true
+  fig_caption: no
+  progressive: true
+  allow_skip: true
 runtime: shiny_prerendered
 ---
 

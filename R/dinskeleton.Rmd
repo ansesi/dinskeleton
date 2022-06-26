@@ -267,16 +267,6 @@ Fazer um teste não apenas avalia o que se sabe , mas também aumenta a retenç�
 
 ## Referências
 
-@yang2018
-
-@roediger2006
-
-@karpicke2011a
-
-@ekuni2020
-
-@j.j.allaire2020
-
 ::: {#refs}
 :::
 
